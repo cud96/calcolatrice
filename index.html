@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcolatrice</title>
+<!--     <link rel="stylesheet" href="index.css" />
+ -->  </head>
+  <body>
+    <div class="input">
+      <label for="input"></label>
+      <input type="text" placeholder="0" id="input" value="0" />
+    </div>
+
+    <!-- creo bottoni -->
+    <div class="bottoni">
+      <button onclick="clicco(this)" class="bottone" value="7">7</button>
+      <button onclick="clicco(this)" class="bottone" value="8">8</button>
+      <button onclick="clicco(this)" class="bottone" value="9">9</button>
+      <button onclick="addizione()" class="bottone bottoneOperazioni ">+</button>
+      <button onclick="clicco(this)" class="bottone" value="4">4</button>
+      <button onclick="clicco(this)" class="bottone" value="5">5</button>
+      <button onclick="clicco(this)" class="bottone" value="6">6</button>
+      <button onclick="sottrazione()" class="bottone bottoneOperazioni">-</button>
+      <button onclick="clicco(this)" class="bottone" value="1">1</button>
+      <button onclick="clicco(this)" class="bottone" value="2">2</button>
+      <button onclick="clicco(this)" class="bottone" value="3">3</button>
+      <button onclick="moltiplicazione()" class="bottone bottoneOperazioni">X</button>
+      <button onclick="pulisci()" class="bottone bottoneOperazioni">AC</button>
+      <button onclick="clicco(this)" class="bottone" value="0">0</button>
+      <button onclick="mostra()" class="bottone bottoneOperazioni">=</button>
+      <button onclick="divisione()" class="bottone bottoneOperazioni">/</button>
+      <button onclick="clicco(this)" class="bottone bottoneOperazioni" value=".">,</button>
+    </div>
+
+    <style>
+
+      html,body{
+        background-color: rgb(95, 90, 90);
+      }
+      
+      .bottoni{
+        display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          gap: 5px;
+          margin: 10px;
+      }
+      .bottone {
+        width: 20vh 10vw;
+        height: 70px;
+        margin:5px;
+        border-radius: 25px;
+        background-color: rgb(168, 157, 157);
+        color:black;
+        font-size: 5vh;
+        font-weight: 800;
+        box-shadow: 5px 5px black;
+        border: solid;
+      }
+
+      .bottoneOperazioni{
+        background-color: rgb(29, 29, 182);
+        color:black;
+        font-size: 5vh;
+        font-weight: 800;
+        box-shadow: 5px 5px black;
+        border: solid;
+      }
+
+      input{
+        width: 100vw;
+        height: 25vh;
+        background-color: rgb(24, 184, 238);
+        font-size:10vw;
+        text-align: center;
+        font-weight: 900;
+        border-radius: 25px;
+        margin:2px;
+        box-sizing: border-box;
+      }
+      input::placeholder{
+       font-size:10vw;
+        text-align: center;
+        font-weight: 900;
+      }
+      
+
+
+
+
+    </style>
+
+    <script src="index.js"></script>
+  </body>
+</html>
