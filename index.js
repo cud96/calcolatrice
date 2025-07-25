@@ -15,7 +15,10 @@
       function pulisci() {
         document.getElementById("input").value = "";
       }
-
+      //pulisci e riporti 0
+      function pulisco(){
+        document.getElementById("input").value = 0;
+      }
       
 
       //addizione dove spostiamo il numeroUno in output
@@ -27,7 +30,7 @@
         );
         localStorage.setItem("operazione","+")
         console.log(localStorage)
-        pulisci()
+        pulisco()
         localStorage.setItem("numeroUno","");
        
       }
@@ -41,7 +44,7 @@
         );
         localStorage.setItem("operazione","-")
         console.log(localStorage)
-        pulisci()
+        pulisco()
         localStorage.setItem("numeroUno","");
        
       }
@@ -55,7 +58,7 @@
         );
         localStorage.setItem("operazione","X")
         console.log(localStorage)
-        pulisci()
+        pulisco()
         localStorage.setItem("numeroUno","");
        
       }
@@ -69,7 +72,7 @@
         );
         localStorage.setItem("operazione","/")
         console.log(localStorage)
-        pulisci()
+        pulisco()
         localStorage.setItem("numeroUno","");
        
       }
