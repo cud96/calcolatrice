@@ -117,8 +117,32 @@
           }
       }
 
+//gomma da cancellare ultima operazione
+function gomma() {
+  const numeroDue = localStorage.getItem("numeroUno");
+  const numeroUno = localStorage.getItem("output"); // questo è il primo numero inserito
+  const operazione = localStorage.getItem("operazione");
 
-
+  if (operazione && numeroDue !== null) {
+    // siamo nella fase del secondo numero
+    if (numeroDue.length > 0) {
+      const nuovoValore = numeroDue.slice(0, -1);
+      localStorage.setItem("output", nuovoValore);
+      document.getElementById("input").value = nuovoValore;
+      console.log("Gomma su numeroDue:", nuovoValore);
+    }
+  } else if (!operazione && numeroUno !== null) {
+    // siamo nella fase del primo numero
+    if (numeroUno.length > 0) {
+      const nuovoValore = numeroUno.slice(0, -1);
+      localStorage.setItem("output", nuovoValore);
+      document.getElementById("input").value = nuovoValore;
+      console.log("Gomma su numeroUno:", nuovoValore);
+    }
+  } else {
+    console.log("Nessun numero da modificare.");
+  }
+}
 
 
 
